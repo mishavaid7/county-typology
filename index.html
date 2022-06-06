@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title> County Typology Map </title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="content-container">
+    <h4> Points Unknown | County Typology Map     </h4>
+    <h1> A Map about Economic Dependence for Non-Metro Counties in America 📊 🗺</h1>
+    <p class="byline"> by Misha Vaid</p>
+    <p> Made by data from <a href="https://www.ers.usda.gov/data-products/county-typology-codes/">Economic Research Service U.S. DEPARTMENT OF AGRICULTURE </a></p>
+    <p> This map only contains information about non-metro counties.  </p>
+
+    <!-- intro -->
+    <p>  </p>
+
+    <!-- First map -->
+    <div id='map'>
+    <div id="legend" class="legend2">
+        <h4>Economic Dependence Type </h4>
+        <div><span style="background-color: #fbbf2a"></span> Farming </div>
+        <div><span style="background-color: #6702a5"></span> Nonspecialized </div>
+        <div><span style="background-color: #f38a46"></span> Maufacturing </div>
+        <div><span style="background-color: #0e0686"></span> Recreation </div>
+        <div><span style="background-color: #4ea13d"></span> Federal/State Government </div>
+        <div><span style="background-color: #ab2890"></span> Mining </div>
+        <div><span style="background-color: #515151"></span> Metro Areas </div>
+    </div>
+    <div class='map-overlay' id='legend'></div>
+     </div>
+    <script type='text/javascript' src="map.js"></script>
+
+    <!-- Second map map -->
+   
+    <div class="content-container">
+        <h4> Points Unknown | Police Brutality Map     </h4>
+        <h1> A map about Police Brutality after the George Floyd protests </h1>
+        <p class="byline"> by Misha Vaid</p>
+        <p> Made with data collected by the Reddit Thread <a href="https://github.com/2020PB/police-brutality"> r/2020PoliceBrutality </a></p>
+        <p> Write another line about this map here.  </p>
+        
+    <div id='map2'> </div>
+
+</div>
+    <script type='text/javascript' src="map2.js"></script>
+
+
+   
+</body>
+
+</html>
