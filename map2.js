@@ -7,9 +7,47 @@ var map2 = new mapboxgl.Map({
     minZoom: 3,
     // the point he gave was -85.5, 37.7 for zooming in on Kentucky
     center: [-98.5795, 37.2283],
-    maxBounds: [
-      [-180, 15],
-      [-30, 72],
-    ],
+    
     projection: 'albers',
 });
+map2.on("load", function () {
+   
+  map2.addLayer(
+    {
+      id: "police_brutality_points",
+      type: "circle",
+      source: {
+        type: "geojson",
+        data: "https://raw.githubusercontent.com/browninstitute/pointsunknowndata/main/webmapAssignmentDataset/policeBrutality.geojson",
+      },
+      paint: {
+        'circle-radius': 6,
+        "circle-color": '#e41a1c',
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0,
+        "circle-opacity": 0.5,
+      },
+      minzoom: 3,
+    },
+    "waterway-label"
+  );
+
+  map2.addLayer(
+    {
+      id: "us_state_outline",
+      type: "line",
+      source: {
+        type: "geojson",
+        data: "data/statesElections.geojson",
+      },
+      paint: {
+        "line-color": "#ffffff",
+        "line-width": 0.7,
+      },
+    },
+    "police_brutality_points"
+  );
+});
+  
+
+
